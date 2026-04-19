@@ -30,22 +30,25 @@ const projects = [
 
 const timeline = [
   {
-    date: "2022 — Present",
+    date: "2022 — 2026",
     title: "B.E. in Computer Science & Engineering",
     place: "Tontadarya College of Engineering, Gadag ",
-    desc: "Pursuing undergraduate degree with focus on software development, data structures, and modern web technologies."
+    desc: "Pursuing undergraduate degree with focus on software development, data structures, and modern web technologies.",
+    gpa: "9.17"
   },
   {
     date: "2020 — 2022",
-    title: "Pre-University (PCMB)",
+    title: "Pre-University Education",
     place: "Sanmarg Pre University College, Gadag ",
-    desc: "Completed pre-university with strong foundation in mathematics, physics, and computer science."
+    desc: "Completed pre-university with strong foundation in mathematics, physics, and computer science.",
+    percentage:"88.66%"
   },
   {
-    date: "Up to 2020",
+    date: "2020",
     title: "SSLC",
     place: "Basaveshwar English Medium High School Gadag",
-    desc: "Completed schooling with distinction, building the academic foundation for engineering studies."
+    desc: "Completed schooling with distinction, building the academic foundation for engineering studies.",
+    percentage:"87.68%"
   }
 ];
 
@@ -87,6 +90,9 @@ $("#timeline").innerHTML = timeline
       <h4 class="timeline-title">${t.title}</h4>
       <p class="timeline-place">${t.place}</p>
       <p class="timeline-desc">${t.desc}</p>
+
+      ${t.gpa ? `<p class="timeline-score">CGPA: ${t.gpa}</p>` : ""}
+      ${t.percentage ? `<p class="timeline-score">Percentage: ${t.percentage}</p>` : ""}
     </div>
   `).join("");
 
